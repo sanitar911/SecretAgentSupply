@@ -1,24 +1,71 @@
-header {
+/*div {
+  border: 1px solid red;
+}*/
+html {
+  font-size: 18px;
+  background-color: white;
+}
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.4em;
+}
+h2, h4 {
+  font-weight: bold;
+}
+.banner {
   background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
   background-size: cover;
-  height: 600px;
+  height: 30em;
+}
+/*body {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: center;*/
+}
+.logo-container {
+  background-color: black;
 }
 .logo {
   background-color: black;
-  width: 100%;
   color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px 0 15px 0.3em;
+}
+.logo img {
+  height: 1.6em;
+  padding-right: 3em;
+  padding-left: 2em;
 }
 .banner-text {
-  height: 200px;
-  width: 400px;
+  position: relative;
+  top: 10em;
+  width: 20em;
   background-color: black;
   color: white;
-  padding: 20px;
+  padding: 2em 3em;
+  margin-left: 5em;
+}
+.banner-text h2 {
+  font-size: 2em;
+  line-height: 1.3em;
+}
+.mobile {
+  display: none;
 }
 .navigation {
+  display: flex;
+  flex-wrap: wrap;
   background-color: darkred;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 4em;
 }
 .navigation span {
   padding: 20px 40px;
@@ -26,37 +73,87 @@ header {
 .navigation a {
   color: white;
 }
-.image-containers {
+.main-body {
+  margin: 0 auto;
+  max-width: 960px;
+}
+.content-containers {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: 4em;
 }
-.image-container {
-  height: 250px;
-  width: 250px;
-  border: 2px solid black;
-  text-align: center;
+.content-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: 3px solid black;
 }
-.image-container img {
-  width: 100%;
+.image {
+  max-width: 10em;
+  margin: auto;
 }
-.image-container p {
+.image img {
+  max-width: 10em;
+  padding: 2em 0;
+}
+.description {
   background-color: black;
   color: white;
+  padding: 1em;
 }
 .text-containers {
   display: flex;
   justify-content: space-between;
-}
-.text-container {
-  text-align: center;
+  margin-bottom: 4em;
 }
 .text-container h6 {
+  display: flex;
+  flex-wrap: wrap;
   color: white;
-  padding: 20px 90px;
+  width: 18em;
+  height: 3.5em;
   background-color: black;
+  align-items: center;
+  padding-left: 2em;
 }
 footer {
+  display: flex;
   background-color: black;
   height: 250px;
   color: white;
+  align-items: center;
+  justify-content: left;
+  padding-left: 40px;
+}
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  .menu {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    color: white;
+  }
+  .banner-text {
+    position: relative;
+    top: 8em;
+    width: 18em;
+    background-color: black;
+    color: white;
+    font-size: 70%;
+    padding: 2em 3em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content-containers {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 3em;
+  }
+  .content-container {
+    margin-bottom: 2em;
+  }
 }
